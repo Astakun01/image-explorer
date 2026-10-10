@@ -1,49 +1,55 @@
 # 🖼️ Image Explorer
 
-A modern and interactive image discovery application built with **React and Vite**. Explore images from multiple APIs, search for images, browse anime artwork, and view individual images on a dedicated details page.
+A modern and interactive image discovery application built with **React and Vite**. Explore images from multiple APIs, search for photos, discover anime images, and view images on a dedicated details page.
 
-The application features a clean user interface, pagination, loading indicators, error handling, and gallery state restoration when navigating back from an image details page.
+🌐 **Live Demo:** https://image-explorer-nine.vercel.app/
+
+---
 
 ## ✨ Features
 
 - 🖼️ **Multiple Image Sources** — Browse images from different APIs.
-- 🔍 **Image Search** — Search for images using Pixabay.
-- 🎌 **Anime Gallery** — Explore anime-style images from Nekos.best.
-- 🌄 **Random Images** — Discover images using Picsum Photos.
-- 📄 **Pagination** — Navigate through multiple pages of images.
-- 👀 **Image Details Page** — Open an individual image on a dedicated page.
-- 🔄 **Gallery State Restoration** — Restore the previous gallery state when navigating back.
-- ⏳ **Loading Indicators** — Display loading feedback while fetching images.
-- ⚠️ **Error Handling** — Handle API request failures gracefully.
-- 📱 **Responsive UI** — A clean interface designed for different screen sizes.
+- 🔍 **Image Search** — Search for images using keywords.
+- 🎌 **Anime Images** — Explore anime-style images.
+- 📄 **Pagination** — Navigate between pages of images.
+- 👀 **Image Details Page** — Open individual images on a dedicated page.
+- 🔄 **State Restoration** — Restore gallery data and scroll position when navigating back.
+- ⏳ **Loading Indicators** — Display loading states while fetching images.
+- ⚠️ **Error Handling** — Handle API request failures.
+- 📱 **Responsive UI** — Clean and interactive user interface.
+- 🎨 **Modern Styling** — Styled using Tailwind CSS.
 
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
 |---|---|
-| React | Building reusable UI components |
+| React | Building the user interface |
 | Vite | Development server and build tool |
-| JavaScript (ES6+) | Application logic and interactivity |
+| JavaScript | Application logic and interactivity |
 | Tailwind CSS | Styling and responsive layouts |
 | Axios | Making HTTP requests to APIs |
-| React Router | Client-side navigation |
-| REST APIs | Fetching image data |
-| sessionStorage | Restoring gallery state during navigation |
+| React Router | Navigation between pages |
+| Session Storage | Preserving gallery state during navigation |
+| REST APIs | Fetching images from external services |
 
 ## 🌐 APIs Used
 
 ### 1. Picsum Photos
-Used to retrieve random images for browsing.
+Used to fetch random images and practice pagination.
 
 ### 2. Nekos.best
-Used to fetch anime-style images.
+Used to explore anime-style images.
 
 ### 3. Pixabay API
-Used to search for images based on user queries.
+Used to search for images using keywords.
 
-**Note:** API availability and request limits depend on the respective API providers.
+## 🚀 Live Demo
 
-## 🚀 Getting Started
+Try the application here:
+
+👉 **https://image-explorer-nine.vercel.app/**
+
+## 💻 Getting Started
 
 Follow these steps to run the project locally.
 
@@ -75,19 +81,15 @@ npm install
 
 ### 4. Configure Environment Variables
 
-Create a `.env` file in the project's root directory.
-
-Add your Pixabay API key:
+Create a `.env` file in the project's root directory and add your Pixabay API key:
 
 ```env
 VITE_PIXABAY_API_KEY=your_pixabay_api_key
 ```
 
-Replace `your_pixabay_api_key` with your actual Pixabay API key.
+Replace `your_pixabay_api_key` with your actual API key.
 
-**Important:** Never commit your `.env` file or expose API keys in public repositories.
-
-Ensure `.env` is included in your `.gitignore` file.
+**Important:** Never commit API keys, passwords, or other secrets to GitHub. Ensure your `.env` file is included in `.gitignore`.
 
 ### 5. Start the Development Server
 
@@ -95,17 +97,15 @@ Ensure `.env` is included in your `.gitignore` file.
 npm run dev
 ```
 
-Open the local URL displayed in your terminal to access the application.
+Open the local URL displayed in your terminal to use the application.
 
 ### 6. Build for Production
-
-To create a production build, run:
 
 ```bash
 npm run build
 ```
 
-To test the production build locally, run:
+To preview the production build locally, run:
 
 ```bash
 npm run preview
@@ -123,7 +123,6 @@ image-explorer/
 │   ├── ImagePage.jsx
 │   ├── index.css
 │   └── main.jsx
-├── .env
 ├── .gitignore
 ├── index.html
 ├── package.json
@@ -132,54 +131,44 @@ image-explorer/
 └── vite.config.js
 ```
 
-*Note: The structure above represents the main project files. Your actual directory structure may differ slightly.*
+*Note: The exact files and folders may vary depending on your project setup.*
 
-## 🧠 Key Concepts Practiced
+## 🧠 Concepts Practiced
 
-Through this project, I practiced:
+While building this project, I practised:
 
 - React functional components and hooks
 - Managing state with `useState`
 - Handling side effects with `useEffect`
-- Fetching data from APIs using Axios
+- Fetching API data using Axios
 - Working with asynchronous JavaScript
-- Implementing search and pagination
+- Conditional rendering
+- Search functionality and pagination
 - Client-side routing with React Router
-- Passing and managing data between pages
-- Preserving application state with `sessionStorage`
-- Implementing loading states and error handling
-- Building responsive interfaces with Tailwind CSS
-- Managing environment variables
-- Preparing a React application for deployment
-
-## 🌍 Live Demo
-
-**Live Application:** [Image Explorer](https://image-explorer-9rfo5tot.vercel.app/)
-
-**GitHub Repository:** [View Source Code](https://github.com/Astakun01/image-explorer)
-
-## 🎯 Project Purpose
-
-I built this project as part of my web development learning journey to strengthen my practical knowledge of React, API integration, state management, routing, and responsive UI development.
-
-The project helped me understand how different APIs can be integrated into a single application and how to manage application state while navigating between pages.
+- Preserving state with Session Storage
+- Loading and error states
+- Responsive UI development with Tailwind CSS
+- Deploying a frontend application using Vercel
 
 ## 🔮 Future Improvements
 
-- Add more image sources.
+- Add more image APIs.
 - Improve mobile responsiveness.
-- Introduce advanced search filters.
-- Add image bookmarking and favorites.
-- Improve accessibility and keyboard navigation.
-- Optimize image loading and performance.
-- Add additional gallery customization options.
+- Add advanced search filters.
+- Improve accessibility.
+- Add image download functionality.
+- Enhance the image details page.
+- Improve error messages and retry functionality.
 
 ## 👨‍💻 Author
 
 **Sahil Gupta**
 
-- GitHub: [@Astakun01](https://github.com/Astakun01)
+- GitHub: https://github.com/Astakun01
+- Live Project: https://image-explorer-nine.vercel.app/
 
 ---
 
 ⭐ If you find this project interesting, feel free to explore the repository!
+
+**Built with React, Vite, and a passion for learning web development.**
